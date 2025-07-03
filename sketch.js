@@ -1,8 +1,14 @@
 let mikudayo
 let baldvance
+let fire
+let xPos = 1000
+let mikuEscape = false
+let normalMiku = true
+
 function preload(){
   mikudayo = loadImage('mikudayo.jpeg')
   baldvance = loadImage('baldvance.jpg')
+  fire = loadImage('fire.jpg')
 }
 
 function setup() {
@@ -31,7 +37,7 @@ function draw() {
   
 //more space
   fill(152, 158, 181)
-  rect(0, 0, 400, 180)
+  rect(0, 0, windowWidth, 180)
   
   fill(134, 140, 163)
   triangle(0, 70, 0, 180, 200, 180)
@@ -58,6 +64,57 @@ function draw() {
 //straw shadow
   stroke(195, 200, 219)
   line(70, 300, 10, 320)
-  image(mikudayo, 200, 350)
-  image(baldvance, 600, 400)
-}
+  //images
+  image(baldvance, 600, 0, 400, 300)
+
+  fill(0)
+  textSize(30)
+  text('click on jd vance for a surprise', windowWidth/2 - 100, windowHeight/2)
+  text('tap "e" for miku to leave', windowWidth/2 - 100, windowHeight/2 + 100)
+
+//mouse interact
+ if(mouseIsPressed && mouseX > 600 && mouseX < 1000 && mouseY < 180 == true){
+    image(fire, 600, 130, 400, 50)
+  }
+
+  //miku escape
+  if(mikuEscape == true){
+    xPos = xPos + 5
+    image(mikudayo, xPos, -20, 250, 350)
+    noStroke()
+    fill(218, 225, 237)
+    rect(500, 180, windowWidth, 200)
+  }
+
+  //miku at table
+  if(normalMiku == true){
+    image(mikudayo, xPos, -20, 250, 350)
+    noStroke()
+fill(218, 225, 237)
+rect(500, 180, windowWidth, 200)
+  }
+
+//making miku return to her seat
+if(xPos >= windowWidth){
+ mikuEscape = false
+ normalMiku = true
+ xPos = 1000
+  }
+
+
+  }
+
+//key interaction
+function keyPressed(){
+ if (key === 'e')
+  mikuEscape = true
+  normalMiku = false
+ }
+
+
+
+
+
+
+
+
