@@ -77,6 +77,7 @@ function draw() {
     image(fire, 600, 130, 400, 50)
   }
 
+
   //miku escape
   if(mikuEscape == true){
     xPos = xPos + 5
@@ -104,13 +105,16 @@ if(xPos >= windowWidth){
 
   }
 
-//key interaction
+// key interaction
 function keyPressed(){
- if (key === 'e')
-  mikuEscape = true
-  normalMiku = false
- }
-
+if (key === 'e'){
+mikuEscape = true
+normalMiku = false
+}else{
+  mikuEscape = false
+  normalMiku = true
+}
+}
 
 
 
