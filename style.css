@@ -1,7 +1,25 @@
+@font-face {
+  font-family: rimouski;
+  src: url(rimouski.otf);
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
+}
+
+
+button {
+  font-family: rimouski;
+  background-color: #1a0d0e; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
 }
