@@ -4,9 +4,8 @@ let x = []
 let y = []
 
 function preload(){
-furby = loadImage('mikudayo.jpeg')
+mikudayo = loadImage('mikudayo.jpeg')
 }
-
 
 function setup(){
  createCanvas(windowWidth, windowHeight)
@@ -24,7 +23,7 @@ function draw(){
 
 
 	for(let i = 0; i < x.length; i++){
-			image(furby, x[i], y[i], 60, 60)
+			image(mikudayo, x[i], y[i], 60, 60)
 				
 				if(dist(mouseX, mouseY, x[i], y[i]) <30){
 					x.splice(i, 1)

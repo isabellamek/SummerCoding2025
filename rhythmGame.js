@@ -2,8 +2,8 @@ let yPos
 
 let font
 
-let startBool = true
-let gameBool = false
+let startBool = false
+let gameBool = true
 let tutBool = false
 
 let canvas
@@ -12,8 +12,13 @@ let start
 let tutorial
 let back
 
-let timer = 0
-let timePassed = 1000
+let noteY = 750
+let note1x = 625
+let note2x = 740
+let note3x = 860
+let note4x = 975
+
+let score = 0
 
 function preload(){
 	sekaiide = loadImage('sekaiide.png')
@@ -31,10 +36,9 @@ function setup(){
 	canvas.style('z-index', '-1')
 	canvas.position(0,0)
 
-	yPos = -5
+	yPos = -50
 	background(255)
 	textFont(font)
-	textSize(50)
 	breakdance.hide()
 
 	start = createButton("Start")
@@ -49,8 +53,10 @@ function setup(){
 	back.mousePressed(startScreen)
 }
 
-function draw(){
 
+
+
+function draw(){
 
 	if(startBool == true){
 		startScreen()
@@ -65,16 +71,21 @@ function draw(){
 		tutorialScreen()
 	}
 
-// print(timer)
-
 }
 
+
+
+
+
+
 function startScreen(){
+	yPos = -50
+	score = 0
 	WorldIsMine.stop()
 	breakdance.hide()
-start.show()
-tutorial.show()
-back.hide()
+	start.show()
+	tutorial.show()
+	back.hide()
 
 	startBool = true
 	gameBool = false 
@@ -84,24 +95,19 @@ noStroke()
 background(163, 41, 94)
 image(songCover, 100, 150, 600, 600)
 fill(0)
+textSize(50)
 text('Sekaiiiiiide', 930, 200)
 fill(26, 13, 14)
 rect(800, 250, 500, 400)
 }
-//if(mouseIsPressed && mouseX > 1000 && mouseX < 1090 && mouseY > 340 && mouseY < 370){
-	//startBool = false
-	//gameBool = true 
-//	tutBool = false
-//}
-
-//if(mouseIsPressed && mouseX > 970 && mouseX < 1130 && mouseY > 485 && mouseY < 520 ){
-////	tutBool = true
 
 
-//}
+
+
 
 
 function gameScreen(){
+	
 	breakdance.hide()
 	start.hide()
 	tutorial.hide()
@@ -116,11 +122,19 @@ tint(180, 180)
 image(sekaiide, 0, 0, 2000, 1200)
 tint(255, 255)
 image(lane, 300, 0, 1000, 1000)
+
+fill(255)
+textSize(50)
+
+
 fill(90)
-   ellipse(625, 750, 80, 80)
-   ellipse(740, 750, 80, 80)
-   ellipse(860, 750, 80, 80)
-   ellipse(975, 750, 80, 80)
+   ellipse(note1x, noteY, 80, 80)
+   ellipse(note2x, noteY, 80, 80)
+   ellipse(note3x, noteY, 80, 80)
+   ellipse(note4x, noteY, 80, 80)
+   textSize(50)
+   text('score: ' + score + '', 200, 300)
+
 if (!WorldIsMine.isPlaying()){
     WorldIsMine.play()
   }
@@ -128,14 +142,44 @@ if (!WorldIsMine.isPlaying()){
 	tutorial.hide()
 	back.show()
 
-//timer = 0
-//timePassed = 1000
-//if(millis() >= timer + timePassed){
-//timer = millis()
-// }
- //print(timer)
+fill(222, 75, 85)
+ellipse(note1x, yPos, 80, 80)
+yPos = yPos + 16
+
+// if(dist(mouseX, mouseY, 625, yPos) < 40){
+// 		//fill(255)
+		
+// 		score = score + 20
+
+// 	}
+if(yPos > windowHeight){
+	yPos = -50
+	score --
+}
 
 }
+
+
+
+
+
+
+function keyPressed(){
+	if(key === 'd' && dist(note1x, noteY, note1x, yPos) < 40){
+		//fill(255)
+		
+		score = score + 20
+
+	}
+
+
+}
+
+
+
+
+
+
 
 
 function tutorialScreen(){
