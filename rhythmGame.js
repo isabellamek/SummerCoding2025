@@ -2,8 +2,8 @@ let yPos
 
 let font
 
-let startBool = false
-let gameBool = true
+let startBool = true
+let gameBool = false
 let tutBool = false
 
 let canvas
