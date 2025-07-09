@@ -152,6 +152,7 @@ yPos = yPos + 16
 // 		score = score + 20
 
 // 	}
+
 if(yPos > windowHeight){
 	yPos = -50
 	score --
