@@ -378,36 +378,36 @@ function endScreen(){
 
 	background(0)
 	textSize(70)
-	text('END', 800, 230)
-	text('score:  ' + score + '', 680, 350)
+	text('END', 500, 230)
+	text('score:  ' + score + '', 380, 350)
 
 //score evaluation
 	if(201 <= score){
 		fill(0)
-		rect(650, 400, 500, 200)
+		rect(350, 400, 500, 200)
 		fill(255)
-		text('YOU PASSED?', 680, 500)
-		image(notGreat, 1200, 250, 300, 300)
+		text('YOU PASSED?', 380, 500)
+		image(notGreat, 900, 250, 300, 300)
 	}
 	if(700 <= score ){
 		fill(0)
-		rect(650, 400, 500, 200)
+		rect(350, 400, 500, 200)
 		fill(255)
-		text('ALRIGHT', 740, 500)
-		image(alright, 1150, 250, 400, 300)
+		text('ALRIGHT', 440, 500)
+		image(alright, 850, 250, 400, 300)
 	}
 	if(score <= 200){
 		fill(0)
-		rect(650, 400, 500, 200)
+		rect(350, 400, 400, 200)
 		fill(255)
-		text('TERRIBLE...', 730, 500)
-		image(cryingMiku, 1100, 200)
+		text('TERRIBLE...', 430, 500)
+		image(cryingMiku, 800, 200)
 	}
 	if(score >= 1000){
 		fill(0)
-		rect(650, 400, 400, 200)
+		rect(350, 400, 400, 200)
 		fill(255)
-		text('AMAZING!', 725, 500)
-		image(AMAZING, 1130, 200, 550, 400)
+		text('AMAZING!', 425, 500)
+		image(AMAZING, 830, 200, 550, 400)
 	}
 }
