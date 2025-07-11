@@ -243,7 +243,7 @@ function gameScreen(){
 
 //lyrics
 	textSize(30)
-	text('keeping me waiting is out of the question!! \n\nnotice me! hey, heeeey!! \n\n\nim the number one princess in the world \n\nthat im adorable\nfrom the bottom of your heart \n\ni just want you to believe\n\n\nits not like its selfish or anything... \n\n\n\ndo something about my right hand\n\ngot it??? if you understand,\n\nreply with three\nnumber three: for every one word i say, \n\noutfit, all the way to the shoes \nnumber two: take a good look at my\n\n\nmy hair \n\nnumber one: notice when i change\n\n\n\n\n\n\ngot it??? \n\n\n\n\ntreat me, \n\nso make sure you know by heart how to \n\n\nim the number one princess in the world', 1100, textY)
+	text('keeping me waiting is out of the question!! \n\nnotice me! hey, heeeey!! \n\n\nim the number one princess in the world \n\nthat im adorable\nfrom the bottom of your heart \n\ni just want you to believe\n\n\nits not like its selfish or anything... \n\n\ndo something about my right hand\n\n if you understand,\ngot it???\n\nreply with three\nnumber three: for every one word i say, \n\noutfit, all the way to the shoes \nnumber two: take a good look at my\n\n\n\nmy hair \nnumber one: notice when i change\n\n\n\n\n\n\ngot it??? \n\n\n\n\ntreat me, \n\nso make sure you know by heart how to \n\n\nim the number one princess in the world', 1100, textY)
 	textY= textY +0.4
 }
 
