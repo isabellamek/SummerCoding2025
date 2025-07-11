@@ -22,6 +22,8 @@ circleY2 = [-1600, -2500, -2800, -3800, -5600, -6900, -8600, -15750, -19000, -22
 circleY3 = [-1400, -4200, -5900, -7300, -8000, -9500, -16000, -17300, -18300, -18800, -19900, -21000, -21500, -23100, -24700, -25300, -26400, -28800, -29800, -30200, -31900, -36100, -36700, -39300, -39900, -41300, -41700, -42300, -43600, -45200, -45800, -53500, -59000, -60700, -61100, -61600, -62200, -62600, -64200, -67200, -68800, -72200, -73000]
 circleY4 = [-400, -4600, -7600, -10450, -11300, -16600, -18000, -19400, -20800, -22200, -23600, -24900, -25100, -27130, -29100, -29500, -31000, -31400, -33400, -36700, -38400, -43000, -45800, -48500, -49100, -49500, -50500, -51000, -54300, -54800, -55300, -56400, -56800, -59700, -63200, -67500, -70100, -70600, -73000]
 
+textY = -1800
+
 let score = 0
 
 let timer = 78
@@ -84,6 +86,7 @@ function startScreen(){
 	circleY3 = [-1400, -4200, -5900, -7300, -8000, -9500, -16000, -17300, -18300, -18800, -19900, -21000, -21500, -23100, -24700, -25300, -26400, -28800, -29800, -30200, -31900, -36100, -36700, -39300, -39900, -41300, -41700, -42300, -43600, -45200, -45800, -53500, -59000, -60700, -61100, -61600, -62200, -62600, -64200, -67200, -68800, -72200, -73000]
 	circleY4 = [-400, -4600, -7600, -10450, -11300, -16600, -18000, -19400, -20800, -22200, -23600, -24900, -25100, -27130, -29100, -29500, -31000, -31400, -33400, -36700, -38400, -43000, -45800, -48500, -49100, -49500, -50500, -51000, -54300, -54800, -55300, -56400, -56800, -59700, -63200, -67500, -70100, -70600, -73000]
 
+	textY = -1800
 	timer = 78
 	score = 0
 	WorldIsMine.stop()
@@ -236,6 +239,11 @@ function gameScreen(){
 		fill(255)
 		text('SUPERB', 400, 500)
 	}
+
+//lyrics
+	textSize(30)
+	text('keeping me waiting is out of the question!! \n\nnotice me! hey, heeeey!! \n\n\nim the number one princess in the world \n\nthat im adorable\nfrom the bottom of your heart \n\ni just want you to believe\n\n\nits not like its selfish or anything... \n\n\n\ndo something about my right hand\n\ngot it??? if you understand,\n\nreply with three\nnumber three: for every one word i say, \n\noutfit, all the way to the shoes \nnumber two: take a good look at my\n\n\nmy hair \n\nnumber one: notice when i change\n\n\n\n\n\n\ngot it??? \n\n\n\n\ntreat me, \n\nso make sure you know by heart how to \n\n\nim the number one princess in the world', 1100, textY)
+	textY= textY +0.4
 }
 
 function keyPressed(){
