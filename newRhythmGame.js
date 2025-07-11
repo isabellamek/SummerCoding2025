@@ -252,15 +252,15 @@ function keyPressed(){
 	if(key === 'd'){
 		
 		for (let i = 0; i < circleY1.length; i++) {
-			if(circleY1[i] <= noteY+70 && circleY1[i] >= noteY - 70){
+			if(circleY1[i] <= noteY+70 && circleY1[i] >= noteY - 70 && i == 0){
 				
 				score = score + 10
 				circleY1.splice(i, 1)
 			}
-			if(circleY1[i] >= 0 && circleY1[i] <= noteY - 70){
+			if(circleY1[i] >= 0 && circleY1[i] <= noteY - 70 && i == 0){
 				score = score -5
 			}
-			if(circleY1[i] >= noteY + 70){
+			if(circleY1[i] >= noteY + 70 && i == 0){
 				score = score -5
 			}
 		}
@@ -270,15 +270,15 @@ function keyPressed(){
 	if(key === 'f'){
 		
 		for (let i = 0; i < circleY2.length; i++) {
-			if(circleY2[i] <= noteY+70 && circleY2[i] >= noteY - 70){
+			if(circleY2[i] <= noteY+70 && circleY2[i] >= noteY - 70 && i == 0){
 				
 				score = score + 10
 				circleY2.splice(i, 1)
 			}
-			if(circleY2[i] >= 0 && circleY2[i] <= noteY - 70){
+			if(circleY2[i] >= 0 && circleY2[i] <= noteY - 70 && i == 0){
 				score = score -5
 			}
-			if(circleY2[i] >= noteY + 70){
+			if(circleY2[i] >= noteY + 70 && i == 0){
 				score = score -5
 			}
 		}
