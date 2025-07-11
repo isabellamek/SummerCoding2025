@@ -162,11 +162,6 @@ function gameScreen(){
 		WorldIsMine.play()
 	}
 
- //buttons
-	start.hide()
-	tutorial.hide()
-	back.show()
-
 
 //note 1
 	for(let i = 0; i < circleY1.length; i++){
